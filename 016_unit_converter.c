@@ -20,16 +20,19 @@ int main(int argc, char ** argv) {
     float feet = 0.0f, inches = 0.0f, centimeters = 0.0f;
     char base_unit = argv[2][0];
     switch(base_unit) {
+        case 'f':
         case 'F':
             feet = atof(argv[1]);
             inches = feet * 12.0f;
             centimeters = inches * 2.54f;
         break;
+        case 'i':
         case 'I':
             inches = atof(argv[1]);
             feet = inches / 12.0f;
             centimeters = inches * 2.54f;
         break;
+        case 'c':
         case 'C':
             centimeters = atof(argv[1]);
             inches = centimeters / 2.54f;
